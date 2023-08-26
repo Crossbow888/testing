@@ -1,27 +1,22 @@
 {
-    "manifest_version": 1,
+    "manifest_version": 2,
     "name": "Borderify",
-    "version": 0.1,
-
-    "description": "Shows a border on thisissidam website",
-
+    "version": "0.1",
+    "description": "Shows a border on any website",
     "icons": {
-        "file": "Alecive-Flatwoken-Apps-Whatsapp-C.ico"
+        "48": "Alecive-Flatwoken-Apps-Whatsapp-C.ico" 
     },
-
     "browser_specific_settings": {
-        "gekko": {
+        "gecko": {
             "id": "borderify@example.com"
         }
     },
-
     "content_scripts": [
         {
-            "matches": ["*://*.thisissidam.wordpress.com/*"],
-            "js": "main.js"
+            "matches": ["*://*.com/*"],
+            "js": ["main.js"]
         }
     ],
-
     "permissions": [
         "webRequest",
         "storage"
